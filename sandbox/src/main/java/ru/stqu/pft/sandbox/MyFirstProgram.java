@@ -6,10 +6,10 @@ public class MyFirstProgram {
 		hello("User!");
 
 	Square s = new Square (3);
-	System.out.println("Ploshad kvadrata so storonoi  "+s.l+" = "+ area(s));
+	System.out.println("Ploshad kvadrata so storonoi  "+s.l+" = "+ s.area());
 
 	Rectangle r = new Rectangle(32,4);
-		System.out.println("Pryamougolnik so storonami  " + r.a + " and " + r.b + " imeet ploshad " +  "=" + ploshad(r));
+		System.out.println("Pryamougolnik so storonami  " + r.a + " and " + r.b + " imeet ploshad " +  "=" + r.ploshad());
 	}
 
 	public static void hello (String somebody) {
@@ -17,11 +17,6 @@ public class MyFirstProgram {
 }
 
 
-public static double area (Square s) {
-				return s.l*s.l;
-	}
-  public static double ploshad (Rectangle r){
-		return r.a*r.b;
-}
+
 	}
 
