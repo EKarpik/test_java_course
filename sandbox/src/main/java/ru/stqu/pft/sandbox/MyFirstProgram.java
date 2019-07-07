@@ -8,6 +8,9 @@ public class MyFirstProgram {
 	double len = 5;
 	System.out.println("Площадь квадрата со стороной"+len +"="+ area (len));
 
+	double s = 34;
+	double d = 2;
+	System.out.println("Pryamougolnik so storonami" + s + "и" + d + "imeet ploshad" + ploshad(s,d));
 	}
 
 	public static void hello (String somebody) {
@@ -18,5 +21,8 @@ public class MyFirstProgram {
 	 public static double area (double l) {
 				return l*l;
 	}
-
+public static double ploshad (double a, double b){
+		return a*b;
 }
+	}
+
