@@ -5,12 +5,11 @@ public class MyFirstProgram {
 		hello("Elena!");
 		hello("User!");
 
-	double len = 5;
-	System.out.println("Площадь квадрата со стороной"+len +"="+ area (len));
+	Square s = new Square (3);
+	System.out.println("Ploshad kvadrata so storonoi  "+s.l+" = "+ area(s));
 
-	double s = 34;
-	double d = 2;
-	System.out.println("Pryamougolnik so storonami" + s + "и" + d + "imeet ploshad" + ploshad(s,d));
+	Rectangle r = new Rectangle(32,4);
+		System.out.println("Pryamougolnik so storonami  " + r.a + " and " + r.b + " imeet ploshad " +  "=" + ploshad(r));
 	}
 
 	public static void hello (String somebody) {
@@ -18,11 +17,11 @@ public class MyFirstProgram {
 }
 
 
-	 public static double area (double l) {
-				return l*l;
+public static double area (Square s) {
+				return s.l*s.l;
 	}
-public static double ploshad (double a, double b){
-		return a*b;
+  public static double ploshad (Rectangle r){
+		return r.a*r.b;
 }
 	}
 
