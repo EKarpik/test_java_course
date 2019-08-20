@@ -17,7 +17,7 @@ public class GroupeCreationTests {
 
   @BeforeMethod(alwaysRun = true)
   public void setUp() throws Exception {
-    System.setProperty( "webdriver.chrome.driver", "C:\\Users\\ekarpik\\Documents\\GitHub\\test_java_course\\chromedriver.exe");
+    System.setProperty( "webdriver.chrome.driver", "C:\\addressBook\\Drivers\\chromedriver.exe");
     driver = new ChromeDriver();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     driver.get("http://localhost/addressbook/");
