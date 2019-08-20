@@ -3,6 +3,7 @@ package ru.stqa.pft.addressbook;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.After;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
@@ -14,15 +15,11 @@ public class GroupeCreationTests {
   private WebDriver driver;
 
 
-  @BeforeClass(alwaysRun = true)
+  @BeforeMethod(alwaysRun = true)
   public void setUp() throws Exception {
     System.setProperty( "webdriver.chrome.driver", "C:\\Users\\ekarpik\\Documents\\GitHub\\test_java_course\\chromedriver.exe");
     driver = new ChromeDriver();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-  }
-
-  @Test
-  public void testUntitledTestCase() throws Exception {
     driver.get("http://localhost/addressbook/");
     driver.findElement(By.name("user")).click();
     driver.findElement(By.name("user")).clear();
@@ -31,6 +28,11 @@ public class GroupeCreationTests {
     driver.findElement(By.name("pass")).clear();
     driver.findElement(By.name("pass")).sendKeys("secret");
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Пароль:'])[1]/following::input[2]")).click();
+  }
+
+  @Test
+  public void testGoupeCreation() throws Exception {
+
     driver.findElement(By.linkText("Группы")).click();
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Группы'])[2]/following::input[4]")).click();
     driver.findElement(By.name("group_name")).click();
@@ -46,12 +48,9 @@ public class GroupeCreationTests {
     driver.findElement(By.linkText("group page")).click();
   }
 
-  @AfterClass(alwaysRun = true)
+  @AfterMethod(alwaysRun = true)
   public void tearDown() throws Exception {
     driver.quit();
-
   }
-
-
 
 }
