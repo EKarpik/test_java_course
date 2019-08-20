@@ -34,7 +34,7 @@ public class GroupeCreationTests {
   public void testGoupeCreation() throws Exception {
 
     driver.findElement(By.linkText("Группы")).click();
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Группы'])[2]/following::input[4]")).click();
+    driver.findElement(By.name("new")).click();
     driver.findElement(By.name("group_name")).click();
     driver.findElement(By.name("group_name")).clear();
     driver.findElement(By.name("group_name")).sendKeys("test1");
