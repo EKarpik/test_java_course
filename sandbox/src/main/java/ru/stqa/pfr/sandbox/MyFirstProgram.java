@@ -1,4 +1,4 @@
-package ru.stqu.pft.sandbox;
+package ru.stqa.pfr.sandbox;
 public class MyFirstProgram {
 	public static void main(String[] args) {
 		hello("world!");
