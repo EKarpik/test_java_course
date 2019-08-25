@@ -11,20 +11,21 @@ public class GroupeHelper {
     this.driver = driver;
   }
 
-  public void submitGroupeCreation(String submit) {
+  public void submitGroupeCreation(By submit) {
     driver.findElement(By.name(submit)).click();
   }
 
   public void fillGroupeForm(GroupeData groupeData) {
-    submitGroupeCreation("group_name");
-    driver.findElement(By.name("group_name")).clear();
-    driver.findElement(By.name("group_name")).sendKeys(groupeData.getName());
-    submitGroupeCreation("group_header");
-    driver.findElement(By.name("group_header")).clear();
-    driver.findElement(By.name("group_header")).sendKeys(groupeData.getHeader());
-    submitGroupeCreation("group_footer");
-    driver.findElement(By.name("group_footer")).clear();
-    driver.findElement(By.name("group_footer")).sendKeys(groupeData.getFooter());
+    type(By.name ("group_name"), groupeData.getName());
+    type(By.name("group_header"), groupeData.getHeader());
+    type(By.name("group_footer"), groupeData.getFooter());
+  }
+
+
+  private void type(By locator, String text) {
+    submitGroupeCreation(locator);
+    driver.findElement(locator).clear();
+    driver.findElement(locator).sendKeys(text);
   }
 
   public void initGoupeCreation(String s) {
