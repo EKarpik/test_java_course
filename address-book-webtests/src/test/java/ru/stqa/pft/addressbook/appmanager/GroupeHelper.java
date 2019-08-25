@@ -11,8 +11,8 @@ public class GroupeHelper {
     this.driver = driver;
   }
 
-  public void submitGroupeCreation(By submit) {
-    driver.findElement(By.name(submit)).click();
+  public void submitGroupeCreation() {
+    click(By.name("submit"));
   }
 
   public void fillGroupeForm(GroupeData groupeData) {
@@ -23,21 +23,21 @@ public class GroupeHelper {
 
 
   private void type(By locator, String text) {
-    submitGroupeCreation(locator);
+    click(locator);
     driver.findElement(locator).clear();
     driver.findElement(locator).sendKeys(text);
   }
 
-  public void initGoupeCreation(String s) {
+  public void initGoupeCreation() {
     submitGroupeCreation(s);
   }
 
-  public void returnToGroupePage(String группы) {
-    driver.findElement(By.linkText(группы)).click();
-}
+  public void returnToGroupePage() {
+    click(By.name("группы"));
+  }
 
-  public void deleteSelectedGroupes(String delete) {
-    driver.findElement(By.name(delete)).click();
+  public void deleteSelectedGroupes() {
+    click(By.name("delete"));
   }
 
   public void selectGroupe(String s) {
@@ -45,7 +45,7 @@ public class GroupeHelper {
   }
 
   public void goToGroupePage(String группы) {
-    driver.findElement(By.linkText(группы)).click();
+    click(By.linkText("группы"));
   }
 
 }
