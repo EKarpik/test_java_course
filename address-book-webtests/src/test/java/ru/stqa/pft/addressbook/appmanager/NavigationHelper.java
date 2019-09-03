@@ -10,6 +10,6 @@ public class NavigationHelper extends HelperBase{
   }
 
   public void goToGroupePage() {
-    click(By.name("группы"));
+    click(By.linkText("Группы"));
   }
 }

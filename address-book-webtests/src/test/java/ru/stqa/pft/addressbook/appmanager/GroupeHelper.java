@@ -22,14 +22,14 @@ public class GroupeHelper extends HelperBase {
 
 
   public void initGoupeCreation() {
-    click(By.name("Группы"));
+    click(By.name("new"));
   }
   public void createGroupe() {
-    click(By.name("Новая группа"));
+    click(By.name("group_name"));
   }
 
   public void returnToGroupePage() {
-    click(By.name("Группы"));
+    click(By.linkText("group page"));
   }
 
   public void deleteSelectedGroupes() {
