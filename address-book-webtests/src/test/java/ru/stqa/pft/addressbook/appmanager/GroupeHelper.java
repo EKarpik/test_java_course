@@ -7,7 +7,7 @@ import ru.stqa.pft.addressbook.model.GroupeData;
 public class GroupeHelper extends HelperBase {
 
   public GroupeHelper(WebDriver driver) {
-        super(driver);
+    super(driver);
   }
 
   public void submitGroupeCreation() {
@@ -22,22 +22,29 @@ public class GroupeHelper extends HelperBase {
 
 
   public void initGoupeCreation() {
-    click(By.name("new"));
+    click(By.name("Группы"));
   }
-    public void returnToGroupePage() {
-        click(By.name("группы"));
+  public void createGroupe() {
+    click(By.name("Новая группа"));
+  }
+
+  public void returnToGroupePage() {
+    click(By.name("Группы"));
   }
 
   public void deleteSelectedGroupes() {
-        click(By.name("delete"));
+    click(By.name("delete"));
   }
 
   public void selectGroupe() {
-        click(By.name("selected[]"));
+    click(By.name("selected[]"));
   }
 
-  public void goToGroupePage(String группы) {
-        click(By.linkText("группы"));
+  public void initGroupeModification() {
+    click(By.name("edit"));
   }
 
+  public void submitGroupeModification() {
+    click(By.name("update"));
+  }
 }

@@ -23,12 +23,9 @@ public class ApplicationManager {
     sessionHelper.login("admin", "secret");
   }
 
-
-
   private void goToPage() {
     driver.get("http://localhost/addressbook/");
   }
-
 
   public void stop() {
     driver.quit();

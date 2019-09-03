@@ -9,7 +9,7 @@ public class NavigationHelper extends HelperBase{
     super(driver);
   }
 
-  public void goToGroupePage(String группы) {
-    click(By.linkText(группы));
+  public void goToGroupePage() {
+    click(By.name("группы"));
   }
 }
